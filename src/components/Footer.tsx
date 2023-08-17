@@ -20,7 +20,7 @@ const Footer = ({ className }: React.HTMLAttributes<HTMLElement>) => {
             </a>
             . Source code{" "}
             <a
-              href="https://github.com/aditya-exe"
+              href="https://github.com/aditya-exe/grovr-test"
               target="_blank"
               rel="noreferrer"
               className="font-medium underline underline-offset-4"

@@ -10,13 +10,13 @@ const ThemeSwitch = () => {
   // const handleMode = () => {
   //   setDarkTheme(!darkTheme);
   // };
-  const { setTheme } = useTheme();
+  const { theme, setTheme } = useTheme();
 
   return (
     <div className="md:flex items-center hidden gap-x-2">
       <Icons.sun />
       <Switch
-        // checked={darkTheme}
+        // checked={theme}
         onCheckedChange={(e) => {
           if (e.valueOf()) {
             setTheme("dark");
@@ -24,7 +24,7 @@ const ThemeSwitch = () => {
             setTheme("light");
           }
         }}
-        // className={`${darkTheme ? "bg-blue-900" : "bg-orange-700"}`}
+        className={`${theme ? "bg-blue-900" : "bg-orange-700"}`}
       />
       <Icons.star />
     </div>
