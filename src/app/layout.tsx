@@ -1,5 +1,3 @@
-"use client";
-
 import Navbar from "@/components/Navbar";
 import "./globals.css";
 import type { Metadata } from "next";
@@ -13,6 +11,7 @@ import Link from "next/link";
 import Footer from "@/components/Footer";
 import { ThemeProvider } from "next-themes";
 import { Toaster } from "react-hot-toast";
+import Providers from "@/components/Providers";
 
 const fontSans = Inter({
   subsets: ["latin"],
@@ -57,7 +56,7 @@ export default function RootLayout({
           fontHeading.variable
         )}
       >
-        <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
+        <Providers>
           <div className="flex min-h-screen flex-col">
             <header className="p-3 z-40 bg-background">
               <div className="flex h-20 items-center justify-between py-6">
@@ -76,7 +75,7 @@ export default function RootLayout({
             <Footer />
           </div>
           <Toaster />
-        </ThemeProvider>
+        </Providers>
       </body>
     </html>
   );
